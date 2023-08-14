@@ -30,7 +30,7 @@ export default component$(() => {
     <ul class="flex space-x-4 place-self-center md:place-self-start">
       {socials.map((social) => (
         <li class="hover:scale-105 transition duration-100" key={social.href}>
-          <Link href={social.href}>
+          <Link href={social.href} target="_blank">
             <social.icon class="h-6 w-6" />
           </Link>
         </li>

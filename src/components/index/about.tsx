@@ -1,5 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-import Socials from "./socials";
 import Work from "./work";
 
 export default component$(() => {

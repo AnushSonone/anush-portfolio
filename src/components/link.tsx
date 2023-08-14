@@ -3,7 +3,7 @@ import { useLocation } from "@builder.io/qwik-city";
 import clsx from "clsx";
 interface LinkProps {
   href: string;
-  class: string;
+  class?: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
 }
 
