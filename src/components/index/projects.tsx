@@ -29,7 +29,7 @@ const projects: ProjectProps[] = [
 ];
 export default component$(() => {
   return (
-    <section>
+    <section class="px-4 md:px-0">
       <h1 class="md:text-5xl text-4xl font-bold text-primary md:text-left text-center">
         My Projects
       </h1>
@@ -37,7 +37,7 @@ export default component$(() => {
         Check out my cool projects, or contact me to work on something amazing
         together!
       </aside>
-      <ul class="mt-8 grid grid-flow-row md:grid-flow-col md:grid-cols-3 grid-rows-3 grid-cols-1 md:grid-rows-1 gap-4">
+      <ul class="mt-8 grid grid-flow-row md:grid-flow-col md:grid-cols-3 grid-rows-3 grid-cols-1 md:grid-rows-1 gap-8">
         {projects.map((project) => (
           <Project {...project} />
         ))}
