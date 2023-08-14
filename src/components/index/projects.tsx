@@ -15,7 +15,7 @@ const projects: ProjectProps[] = [
     title: "Oinkers",
     description: "A minimalistic money management platform for kids and teens.",
     tags: ["Vue", "Capacitor", "TypeScript", "TailwindCSS", "NestJS"],
-    image: "/assets/oinkers.png",
+    image: "/oinkers.png",
     link: "https://play.google.com/store/apps/details?id=me.josefmacera.oinkers",
   },
   {
@@ -23,7 +23,7 @@ const projects: ProjectProps[] = [
     description:
       "Desktop/web application that allows Nevadans to find natural parks in their area.",
     tags: ["Vue", "TailwindCSS", "TypeScript"],
-    image: "/assets/ntrl.png",
+    image: "/ntrl.png",
     link: "https://ntrl.vercel.app",
   },
 ];

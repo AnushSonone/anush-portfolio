@@ -11,7 +11,7 @@ module.exports = {
         secondary: "#b877db",
       },
       backgroundImage: {
-        contours: "url('/assets/contours.svg')",
+        contours: "url('/contours.svg')",
       },
     },
   },

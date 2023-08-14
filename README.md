@@ -28,7 +28,7 @@ Inside your project, you'll see the following directory structure:
 
 - `src/components`: Recommended directory for components.
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/.html#the-public-directory) for more info.
 
 ## Add Integrations and deployment
 
