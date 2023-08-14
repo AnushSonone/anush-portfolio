@@ -6,7 +6,7 @@ export default component$(() => {
     <section class="gap-8 place-items-center h-[80vh] mt-[20vh]">
       <section class="space-y-4 flex flex-col text-center md:text-left">
         <img
-          src="/alpaca.png"
+          src="/me.jpg"
           class="aspect-square rounded-full w-16 h-16 place-self-center md:place-self-start"
         />
 
