@@ -1,6 +1,7 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import type { ProjectProps } from "./project";
 import Project from "./project";
+import { animate, inView, stagger } from "motion";
 
 const projects: ProjectProps[] = [
   {
@@ -28,12 +29,40 @@ const projects: ProjectProps[] = [
   },
 ];
 export default component$(() => {
+  useVisibleTask$(() => {
+    inView(".projects-anim", (info) => {
+      animate(
+        info.target,
+        {
+          opacity: 1,
+          y: 10,
+        },
+        {
+          duration: 0.3,
+          easing: "ease-in",
+          delay: 0.4,
+        }
+      );
+      animate(
+        ".project",
+        {
+          opacity: 1,
+          x: 10,
+        },
+        {
+          duration: 0.3,
+          easing: "ease-in",
+          delay: stagger(0.2, { start: 0.3 }),
+        }
+      );
+    });
+  });
   return (
-    <section class="px-4 md:px-0" id="projects">
-      <h1 class="md:text-5xl text-4xl font-bold text-primary md:text-left text-center">
+    <section class="px-4 md:px-0">
+      <h1 class="md:text-5xl text-4xl font-bold text-primary md:text-left text-center projects-anim opacity-0">
         My Projects
       </h1>
-      <aside class="text-xl mt-4 md:text-left text-center">
+      <aside class="text-xl mt-4 md:text-left text-center projects-anim opacity-0">
         Check out my cool projects, or contact me to work on something amazing
         together!
       </aside>

@@ -1,9 +1,28 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import Socials from "./socials";
+import { animate, inView } from "motion";
 
 export default component$(() => {
+  useVisibleTask$(() => {
+    inView("#hero", (info) => {
+      animate(
+        info.target,
+        {
+          opacity: 1,
+          y: 10,
+        },
+        {
+          duration: 0.3,
+          easing: "ease-in",
+        }
+      );
+    });
+  });
   return (
-    <section class="gap-8 place-items-center h-[80vh] mt-[20vh]">
+    <section
+      class="gap-8 place-items-center h-[80vh] mt-[20vh] opacity-0 translate-y-10"
+      id="hero"
+    >
       <section class="space-y-4 flex flex-col text-center md:text-left">
         <img
           src="/me.jpg"

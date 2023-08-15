@@ -1,10 +1,27 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import Work from "./work";
+import { animate, inView } from "motion";
 
 export default component$(() => {
+  useVisibleTask$(() => {
+    inView("#about", (info) => {
+      animate(
+        info.target,
+        {
+          opacity: 1,
+          y: 10,
+        },
+        {
+          duration: 0.3,
+          easing: "ease-in",
+          delay: 0.4,
+        }
+      );
+    });
+  });
   return (
     <section
-      class="gap-8 place-items-center mt-[10vh] grid md:grid-cols-2 grid-cols-1 h-[80vh]"
+      class="gap-8 place-items-center mt-[10vh] grid md:grid-cols-2 grid-cols-1 h-[80vh] opacity-0"
       id="about"
     >
       <section class="space-y-4 flex flex-col text-center md:text-left">
