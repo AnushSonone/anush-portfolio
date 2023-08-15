@@ -9,10 +9,14 @@ interface LinkProps {
 
 export default component$<LinkProps>(({ href, ...props }) => {
   const active = useLocation().url.pathname == href;
-
+  console.log(active);
   return (
     <a
-      class={(clsx(active ? "text-primary" : ""), props.class)}
+      class={clsx(
+        "hover:border-b-4 border-primary hover:border-dotted transition-all duration-100 ease-in-out box-border",
+        active && "border-b-4 border-primary border-dotted ",
+        props.class || ""
+      )}
       href={href}
       target={props.target}
     >
