@@ -9,16 +9,16 @@ const links = [
     href: "/",
   },
   {
-    name: "Blog",
-    href: "/blog",
+    name: "Articles",
+    href: "/articles",
   },
   {
     name: "Projects",
-    href: "/projects",
+    href: "#projects",
   },
   {
     name: "About",
-    href: "/about",
+    href: "#about",
   },
 ];
 

@@ -29,7 +29,7 @@ const projects: ProjectProps[] = [
 ];
 export default component$(() => {
   return (
-    <section class="px-4 md:px-0">
+    <section class="px-4 md:px-0" id="projects">
       <h1 class="md:text-5xl text-4xl font-bold text-primary md:text-left text-center">
         My Projects
       </h1>

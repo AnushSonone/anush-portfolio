@@ -12,7 +12,7 @@ export interface ProjectProps {
 
 export default component$<ProjectProps>((props) => {
   return (
-    <li class="border border-opacity-10 rounded-md flex flex-col bg-base-100 hover:bg-base-200 group p-8 relative grow">
+    <li class="border border-zinc-700 rounded-md flex flex-col bg-base-100 hover:bg-base-200 group p-8 relative grow">
       <img src={props.image} class="h-24 w-24 rounded-l-md bg-white" />
       <h3 class="text-3xl font-semibold mt-8">{props.title}</h3>
       <p class="text-sm">{props.description}</p>

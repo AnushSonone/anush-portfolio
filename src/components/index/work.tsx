@@ -10,14 +10,14 @@ const work = [
     to: "Present",
   },
   {
-    role: "CTO",
+    role: "Chief Technical Officer",
     company: "Arafa Tech Foundation",
     image: "/arafa_tech.png",
     from: "February 2023",
     to: "Present",
   },
   {
-    role: "CIO",
+    role: "Chief Information Officer",
     company: "School Simplified",
     image: "/school_simplified.svg",
     from: "May 2022",
@@ -26,7 +26,7 @@ const work = [
 ];
 export default component$(() => {
   return (
-    <div class="rounded-2xl border border-opacity-70 p-6 bg-base-100">
+    <div class="rounded-2xl border border-opacity-70 p-6 bg-base-100 border-zinc-700">
       <h2 class="font-semibold inline-flex items-center text-primary">
         <LuSwords class="h-6 w-6 mr-2" />
         Work
