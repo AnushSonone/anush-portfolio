@@ -9,6 +9,7 @@ export default component$<{ onChange: (v: any) => void }>(({ onChange }) => {
         type="text"
         class="bg-transparent px-12 outline-none"
         placeholder="Santa Claus Conquers the Martians"
+        // @ts-ignore
         onInput$={(e) => onChange(e.target.value)}
       />
     </div>

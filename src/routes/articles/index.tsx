@@ -14,8 +14,9 @@ export default component$(() => {
   return (
     <>
       <Search
-        onChange={$((v) => {
+        onChange={$((v: string) => {
           searchKey.value = v;
+          return;
         })}
       />
       <div class="container mx-auto mt-16">

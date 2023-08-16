@@ -18,6 +18,7 @@ export default defineConfig(() => {
           rehypePlugins: [
             rehypePrettyCode,
             {
+              // @ts-ignore
               theme: oneDarkTheme,
             },
           ],
