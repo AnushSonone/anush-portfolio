@@ -1,0 +1,47 @@
+---
+title: How I made the Spellsword Loading Animation
+created: 8/15/2023
+author: Josef Macera
+---
+import { LuSwords } from "@qwikest/icons/lucide"
+
+I recently came across this [super cool blog](https://www.cassie.codes/posts/creating-my-logo-animation/) on using SVG graphics and animations to create an insanely awesome animation effect. In essense, it uses the SVG's `stroke-dasharray` and `stroke-dashoffset` properties to essentially change the filling of the SVG. A few weeks ago, I decided I wanted to give this a try on a side project of mine, [Spellsword](https://spellsword.xyz).
+
+Take the following sword icon as an example, from the [Lucide](https://lucide.dev) icon library:
+
+<LuSwords class="h-24 w-24 text-primary mx-auto"/>
+
+One can create a semi fancy loading animation just by applying a rotation animation to the icon:
+
+<LuSwords class="h-24 w-24 text-primary mx-auto animate-spin"/>
+
+But what if we wanted to create a loading animation that fills the icon with color? Well, we can do that by using the `stroke-dasharray` and `stroke-dashoffset` properties. The `stroke-dasharray` property defines the length of the dashes in the stroke, and the `stroke-dashoffset` property defines the offset of the dashes. By animating the `stroke-dashoffset` property, we can create a loading animation that fills the icon with color.
+
+The trick is to finding the right values of `stroke-dasharray` and `stroke-dashoffset` to create the desired effect. I found that the best way to do this is to use a tool like [SVG Path Visualizer](https://codepen.io/anthonydugois/pen/mewdyZ) to visualize the path of the icon. For example:
+
+```css
+.loader path {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 200;
+  animation: draw 3s ease-in alternate;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+```
+
+We start with an offset of 200, then over the course of the animation, we go down to a 0 offset (regular stroke state). Note that I chose to alternate the animation direction so it would feel continous, but you can play around with the animation direction to get the desired effect. As my use case was just a loader, I chose to use the `infinite` iteration count, but you can change this to whatever you want. Here is a rough example:
+
+<LuSwords class="h-24 w-24 text-primary mx-auto loader animate-spin"/>
+
+## Tweaks for SVG paths
+
+Some SVG's obviously don't contain just one path tag, but rather a collection of `line` and `polylines`. In this case, you can just apply the same animation to each tag, like `.loader line, .loader polyline {...}`. However, you may find that the animation doesn't look quite right. This is because the `stroke-dasharray` and `stroke-dashoffset` values are not the same for each path. You can use the SVG Path Visualizer to find the correct values for each path, and then apply the animation to each path individually. 
+
+You will probably need to tweak the dasharray and offset of each portion of the SVG to get what you want, so this can get a bit tedious especially for more complex SVG's, and it's not the most predictable process. However, the end result is pretty cool, and it's a fun way to add some flair to your website.
