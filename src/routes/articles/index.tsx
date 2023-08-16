@@ -1,24 +1,26 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useComputed$, useSignal, $ } from "@builder.io/qwik";
 import Blog from "~/components/articles/blog";
 import Search from "~/components/articles/search";
-
-interface BlogMeta {
-  title: string;
-  description: string;
-  date: string;
-  id: string;
-  image: string;
-}
+import { blogs } from "./data";
 
 export default component$(() => {
-  const blogs: BlogMeta[] = [];
+  const searchKey = useSignal("");
+  const shownBlogs = useComputed$(() => {
+    return blogs.filter((blog) => {
+      return blog.title.toLowerCase().includes(searchKey.value.toLowerCase());
+    });
+  });
 
   return (
     <>
-      <Search />
+      <Search
+        onChange={$((v) => {
+          searchKey.value = v;
+        })}
+      />
       <div class="container mx-auto mt-16">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 h-full w-full max-w-4xl mx-auto">
-          {blogs.map((blog) => (
+          {shownBlogs.value.map((blog) => (
             <Blog {...blog} key={blog.title} />
           ))}
         </div>

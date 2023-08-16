@@ -14,7 +14,12 @@ export default component$(() => {
           <LuArrowLeft class="h-8 w-8 hover:bg-base-200 rounded-full hover:-rotate-12 p-1 transition" />
         </Link>
       )}
-      <div class="container mx-auto mt-[5%] prose prose-invert lg:prose-xl text-left">
+      <div
+        class={`container mx-auto mt-[5%] text-left ${
+          location.url.pathname !== "/articles/" &&
+          "prose prose-invert lg:prose-xl"
+        }`}
+      >
         {location.url.pathname !== "/articles/" && (
           <section class="bg-base-200 p-4 rounded-2xl opacity-90">
             <img src="/me.jpg" class="h-10 w-10 rounded-full" />
