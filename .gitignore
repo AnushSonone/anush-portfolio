@@ -28,6 +28,8 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/*.code-snippets
 
+tmp
+
 .idea
 .DS_Store
 *.suo

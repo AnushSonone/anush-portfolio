@@ -9,7 +9,6 @@ interface LinkProps {
 
 export default component$<LinkProps>(({ href, ...props }) => {
   const active = useLocation().url.pathname == href;
-  console.log(active);
   return (
     <a
       class={clsx(

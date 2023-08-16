@@ -24,6 +24,7 @@
   "devDependencies": {
     "@builder.io/qwik": "^1.2.6",
     "@builder.io/qwik-city": "^1.2.6",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/eslint": "8.40.2",
     "@types/node": "^20.4.0",
     "@typescript-eslint/eslint-plugin": "5.61.0",
@@ -44,6 +45,8 @@
     "@qwikest/icons": "^0.0.8",
     "clsx": "^2.0.0",
     "framer-motion": "^10.15.1",
-    "motion": "^10.16.2"
+    "motion": "^10.16.2",
+    "rehype-pretty-code": "^0.10.0",
+    "shiki": "^0.14.3"
   }
 }
