@@ -27,6 +27,21 @@ const projects: ProjectProps[] = [
     image: "/ntrl.png",
     link: "https://ntrl.vercel.app",
   },
+  {
+    title: "Kody",
+    description: "The Arafa Tech Foundation's Discord Bot",
+    tags: ["Prisma", "TypeScript", "Railway"],
+    image: "/kody.png",
+    link: "https://github.com/Arafa-Tech-Foundation/Discord-Bot",
+  },
+  {
+    title: "Classroom",
+    description:
+      "Classroom management app that allows students to track assignments and communicate with teachers in real time. My CS50 Final Project.",
+    tags: ["Django", "Uvicorn", "JavaScript"],
+    image: "/students.jpg",
+    link: "https://github.com/lmaosoggypancakes/classroom",
+  },
 ];
 export default component$(() => {
   useVisibleTask$(() => {
@@ -58,7 +73,7 @@ export default component$(() => {
     });
   });
   return (
-    <section class="px-4 md:px-0 mt-[10vh">
+    <section class="px-4 md:px-0 mt-[10vh]">
       <h1 class="md:text-5xl text-4xl font-bold text-primary md:text-left text-center projects-anim opacity-0">
         My Projects
       </h1>
@@ -66,7 +81,7 @@ export default component$(() => {
         Check out my cool projects, or contact me to work on something amazing
         together!
       </aside>
-      <ul class="mt-8 grid grid-flow-row md:grid-flow-col md:grid-cols-3 grid-rows-3 grid-cols-1 md:grid-rows-1 gap-8">
+      <ul class="mt-8 flex gap-8 flex-wrap justify-center">
         {projects.map((project) => (
           <Project {...project} />
         ))}

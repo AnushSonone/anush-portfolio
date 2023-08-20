@@ -12,8 +12,11 @@ export interface ProjectProps {
 
 export default component$<ProjectProps>((props) => {
   return (
-    <li class="border border-zinc-700 rounded-md flex flex-col bg-base-100 hover:bg-base-200 group p-8 relative grow project opacity-0">
-      <img src={props.image} class="h-24 w-24 rounded-l-md bg-white" />
+    <li class="border border-zinc-700 rounded-md flex flex-col bg-base-100 hover:bg-base-200 group p-8 relative w-full max-w-lg project opacity-0">
+      <img
+        src={props.image}
+        class="h-24 w-24 rounded-l-md bg-white object-contain"
+      />
       <h3 class="text-3xl font-semibold mt-8">{props.title}</h3>
       <p class="text-sm">{props.description}</p>
       <ul class="mt-4 flex gap-2 flex-wrap">
