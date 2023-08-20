@@ -21,7 +21,7 @@ export default component$(() => {
   });
   return (
     <section
-      class="gap-8 place-items-center mt-[10vh] grid md:grid-cols-2 grid-cols-1 h-[80vh] opacity-0"
+      class="gap-8 place-items-center mt-[10vh] grid md:grid-cols-2 grid-cols-1 min-h-[80vh] opacity-0"
       id="about"
     >
       <section class="space-y-4 flex flex-col text-center md:text-left">
