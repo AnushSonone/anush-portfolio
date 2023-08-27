@@ -27,7 +27,7 @@ const socials = [
 ];
 export default component$(() => {
   return (
-    <ul class="flex space-x-4 place-self-center md:place-self-start">
+    <ul class="flex space-x-4 place-self-start mt-48 md:mt-0">
       {socials.map((social) => (
         <li class="hover:scale-105 transition duration-100" key={social.href}>
           <Link href={social.href} target="_blank">

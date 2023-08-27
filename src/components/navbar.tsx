@@ -42,13 +42,27 @@ export default component$(() => {
           ))}
         </ul>
         <button
-          class="md:hidden block place-self-end p-2 rounded-md hover:bg-base-200 active:bg-base-200 transition active:scale-90"
+          class="sm:hidden block mr-auto p-2 rounded-md hover:bg-base-200 active:bg-base-200 transition active:scale-90"
           aria-label="toggle menu"
           onClick$={showMenu}
         >
           <LuAlignJustify class="w-6 h-6" />
         </button>
-        <LuGithub class="w-8 h-8 absolute right-4 hover:rotate-12 transition hover:scale-105" />
+        <section class="flex md:block flex-col justify-center">
+          <Link
+            href="https://github.com/lmaosoggypancakes/www.soggypancakes.tech"
+            target="_blank"
+            class=""
+          >
+            <LuGithub class="w-8 h-8 hidden sm:block absolute right-4 hover:rotate-12 transition hover:scale-105" />
+          </Link>
+          <a href="/">
+            <img
+              src="/me.jpg"
+              class="sm:hidden aspect-square rounded-full w-8 h-8 place-self-center md:place-self-start"
+            />
+          </a>
+        </section>
       </nav>
       <div
         class={clsx(

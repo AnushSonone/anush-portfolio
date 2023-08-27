@@ -62,7 +62,7 @@ export default component$(() => {
         ".project",
         {
           opacity: 1,
-          x: 10,
+          // x: 0,
         },
         {
           duration: 0.3,
@@ -81,7 +81,7 @@ export default component$(() => {
         Check out my cool projects, or contact me to work on something amazing
         together!
       </aside>
-      <ul class="mt-8 flex gap-8 flex-wrap justify-center">
+      <ul class="mt-16 grid grid-flow-row grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 overflow-auto gap-8">
         {projects.map((project) => (
           <Project {...project} />
         ))}
