@@ -53,7 +53,7 @@ export default component$(() => {
         ))}
       </ol>
       <a
-        href="/resume"
+        href="/resume.pdf"
         target="_blank"
         class="w-full bg-primary text-base-200 mt-8  p-4 rounded-md flex"
       >

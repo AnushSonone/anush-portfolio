@@ -42,7 +42,7 @@ export default component$(() => {
           shoegaze and dream pop.
         </span>
       </section>
-      <section class="w-full md:px-16 px-4">
+      <section class="w-full">
         <Work />
       </section>
     </section>
