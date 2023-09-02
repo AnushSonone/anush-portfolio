@@ -14,11 +14,11 @@ const links = [
   },
   {
     name: "Projects",
-    href: "#projects",
+    href: "/#projects",
   },
   {
     name: "About",
-    href: "#about",
+    href: "/#about",
   },
 ];
 
@@ -54,7 +54,7 @@ export default component$(() => {
               href="https://github.com/lmaosoggypancakes/www.soggypancakes.tech"
               target="_blank"
               class=""
-            >
+              >
               <LuGithub class="w-8 h-8 hidden sm:block absolute right-4 hover:rotate-12 transition hover:scale-105" />
             </Link>
             <a href="/">

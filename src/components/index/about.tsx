@@ -24,7 +24,7 @@ export default component$(() => {
       class="gap-8 place-items-center mt-[10vh] grid md:grid-cols-2 grid-cols-1 min-h-[80vh] opacity-0"
       id="about"
     >
-      <section class="space-y-4 flex flex-col text-center md:text-left">
+      <section class="space-y-4 flex flex-col md:text-left">
         <h1 class="md:text-5xl text-4xl font-bold text-primary">About me</h1>
         <span class="text-xl max-w-4xl">
           I'm {new Date().getFullYear() - 2005} years old and from Reno, Nevada.
