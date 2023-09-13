@@ -12,7 +12,7 @@ export default component$<LinkProps>(({ href, ...props }) => {
   return (
     <a
       class={clsx(
-        "hover:border-b-4 border-primary hover:border-dotted transition-all duration-100  ease-in-out box-border",
+        "border-b-4 border-transparent border-solid hover:border-primary hover:border-dotted transition-all duration-100  ease-in-out box-border",
         active && "border-b-4 border-primary border-dotted ",
         props.class || ""
       )}

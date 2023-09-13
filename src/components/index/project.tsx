@@ -12,7 +12,7 @@ export interface ProjectProps {
 
 export default component$<ProjectProps>((props) => {
   return (
-    <li class="border border-zinc-700 rounded-md flex flex-col bg-base-100 hover:bg-base-200 group p-8 relative grow max-w-lg project opacity-0">
+    <a class="border border-zinc-700 rounded-md flex flex-col bg-base-100 hover:bg-base-200 group p-8 relative grow max-w-lg project opacity-0" href={props.link} target="_blank">
       <img
         src={props.image}
         class="h-24 w-24 rounded-l-md bg-white object-contain"
@@ -27,13 +27,11 @@ export default component$<ProjectProps>((props) => {
         ))}
       </ul>
 
-      <Link
-        href={props.link}
-        target="_blank"
+      <div
         class="absolute top-4 right-4 hover:text-primary hover:rotate-12 transition"
       >
         <LuExternalLink class="h-6 w-6 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110 transition" />
-      </Link>
-    </li>
+      </div>
+    </a>
   );
 });
