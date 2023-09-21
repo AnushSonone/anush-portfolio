@@ -1,5 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-import Link from "../link";
 import { LuExternalLink } from "@qwikest/icons/lucide";
 
 export interface ProjectProps {
