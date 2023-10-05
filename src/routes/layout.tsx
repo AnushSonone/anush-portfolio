@@ -18,10 +18,10 @@ export default component$(() => {
   return (
     <>
       <Navbar />
-      <div class="min-h-screen text-white md:w-4/5 mx-auto w-5/6 px-2">
+      <div class="min-h-screen text-white mx-auto w-5/6 px-2">
         <Slot />
       </div>
       <Footer />
     </>
   );
-})
+});

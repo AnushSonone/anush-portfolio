@@ -1,5 +1,6 @@
 import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import Work from "./work";
+import Carousel from "./carousel";
 import { animate, inView } from "motion";
 
 export default component$(() => {
@@ -21,12 +22,12 @@ export default component$(() => {
   });
   return (
     <section
-      class="gap-8 place-items-center mt-[10vh] grid md:grid-cols-2 grid-cols-1 min-h-[80vh] opacity-0"
+      class="gap-8 place-items-center mt-[10vh] grid lg:grid-cols-2 grid-cols-1 min-h-[80vh] opacity-0"
       id="about"
     >
       <section class="space-y-4 flex flex-col md:text-left">
         <h1 class="md:text-5xl text-4xl font-bold text-primary">About me</h1>
-        <span class="text-xl max-w-4xl">
+        <span class="text-xl max-w-4xl mb-8">
           I'm {new Date().getFullYear() - 2005} years old and from Reno, Nevada.
           I've been programming ever since I was 15 and am always eager to learn
           everything there is to know about computers as a whole. I'm currently
@@ -42,9 +43,7 @@ export default component$(() => {
           shoegaze and dream pop.
         </span>
       </section>
-      <section class="w-full">
-        <Work />
-      </section>
+      <Carousel />
     </section>
   );
 });

@@ -26,7 +26,7 @@ const work = [
 ];
 export default component$(() => {
   return (
-    <div class="rounded-2xl border border-opacity-70 p-6 bg-base-100 border-zinc-700">
+    <div class="rounded-2xl border border-opacity-70 p-6 bg-base-100 border-zinc-700 max-w-xl mx-auto">
       <h2 class="font-semibold inline-flex items-center text-primary">
         <LuSwords class="h-6 w-6 mr-2" />
         Work
