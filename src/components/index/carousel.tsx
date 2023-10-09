@@ -1,6 +1,5 @@
 import { component$, $, useSignal } from "@builder.io/qwik";
 import {
-  LuArrowBigRight,
   LuArrowLeft,
   LuArrowRight,
 } from "@qwikest/icons/lucide";

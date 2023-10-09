@@ -1,5 +1,4 @@
 import { component$, useVisibleTask$ } from "@builder.io/qwik";
-import Work from "./work";
 import Carousel from "./carousel";
 import { animate, inView } from "motion";
 
