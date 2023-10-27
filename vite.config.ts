@@ -4,6 +4,8 @@ import { qwikCity } from "@builder.io/qwik-city/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import rehypePrettyCode from "rehype-pretty-code";
 import oneDarkTheme from "shiki/themes/one-dark-pro.json";
+import { partytownVite } from "@builder.io/partytown/utils";
+import { join } from "path";
 
 export default defineConfig(() => {
   return {
@@ -26,6 +28,7 @@ export default defineConfig(() => {
       }),
       qwikVite(),
       tsconfigPaths(),
+      partytownVite({ dest: join(__dirname, "dist", "~partytown") }),
     ],
     preview: {
       headers: {
