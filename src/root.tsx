@@ -6,7 +6,7 @@ import {
 } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
 import "./global.css";
-import { QwikPartytown } from "./components/partytown/partytown";
+import { Analytics } from "@vercel/analytics/react";
 
 export default component$(() => {
   /**
@@ -22,18 +22,13 @@ export default component$(() => {
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
         <RouterHead />
-        <QwikPartytown forward={["dataLayer.push"]} />
-        <script
-          async
-          type="text/partytown"
-          src="https://www.googletagmanager.com/gtag/js?id=G-T0JF6ZHHFP"
-        />
       </head>
       <body
         lang="en"
         class="bg-base-100 bg-contours bg-transparent bg-opacity-60 bg-fixed"
       >
         <RouterOutlet />
+        <Analytics />
         <ServiceWorkerRegister />
       </body>
     </QwikCityProvider>
