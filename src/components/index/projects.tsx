@@ -7,15 +7,23 @@ const projects: ProjectProps[] = [
   {
     title: "Spellsword",
     description:
-      "An interactive, realtime, web-based game designed to improve our command of the English language.",
+      "An interactive, realtime game designed to improve our command of the English language.",
     image: "https://spellsword.xyz/logo.png",
     link: "https://spellsword.xyz",
-    tags: ["Nuxt", "TailwindCSS", "Socket.io", "Node.js"],
+    tags: ["nuxt", "tailwindcss", "socket.io", "node.js"],
+  },
+  {
+    title: "CMUEats",
+    description:
+      "Discover new places to eat on campus, and query open/close times for restaurants!\nTechnical Co-lead through ScottyLabs at CMU.",
+    image: "/cmueats.png",
+    link: "https://cmueats.com",
+    tags: ["react", "mui", "styled-components"],
   },
   {
     title: "Oinkers",
     description: "A minimalistic money management platform for kids and teens.",
-    tags: ["Vue", "Capacitor", "TypeScript", "TailwindCSS", "NestJS"],
+    tags: ["vue", "capacitor", "typescript", "tailwindcss", "nestjs"],
     image: "/oinkers.png",
     link: "https://play.google.com/store/apps/details?id=me.josefmacera.oinkers",
   },
@@ -23,14 +31,14 @@ const projects: ProjectProps[] = [
     title: "NTRL",
     description:
       "Desktop/web application that allows Nevadans to find natural parks in their area.",
-    tags: ["Vue", "TailwindCSS", "TypeScript"],
+    tags: ["vue", "tailwindCSS", "typescript"],
     image: "/ntrl.png",
     link: "https://ntrl.vercel.app",
   },
   {
     title: "Kody",
     description: "The Arafa Tech Foundation's Discord Bot",
-    tags: ["Prisma", "TypeScript", "Railway"],
+    tags: ["prisma", "typescript", "railway"],
     image: "/kody.png",
     link: "https://github.com/Arafa-Tech-Foundation/Discord-Bot",
   },
@@ -38,7 +46,7 @@ const projects: ProjectProps[] = [
     title: "Classroom",
     description:
       "Classroom management app that allows students to track assignments and communicate with teachers in real time. My CS50 Final Project.",
-    tags: ["Django", "Uvicorn", "JavaScript"],
+    tags: ["django", "uvicorn", "javascript"],
     image: "/students.jpg",
     link: "https://github.com/lmaosoggypancakes/classroom",
   },
