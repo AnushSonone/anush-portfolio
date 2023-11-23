@@ -15,7 +15,7 @@ export default component$(() => {
    *
    * Don't remove the `<head>` and `<body>` elements.
    */
-
+  inject();
   return (
     <QwikCityProvider>
       <head>
