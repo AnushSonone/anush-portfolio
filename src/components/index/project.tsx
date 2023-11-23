@@ -24,10 +24,10 @@ export default component$<ProjectProps>((props) => {
       <h3 class="text-3xl font-semibold mt-8">{props.title}</h3>
       <p class="text-sm">{props.description}</p>
       <ul class="mt-4 flex gap-1 flex-wrap items-center">
-        {props.tags?.map((tag, index) => (
+        {props.tags.map((tag, index) => (
           <>
             <li class="rounded-md text-xs">{tag}</li>
-            {index !== props.tags?.length - 1 && <BsDot />}
+            {index !== props.tags.length - 1 && <BsDot />}
           </>
         ))}
       </ul>

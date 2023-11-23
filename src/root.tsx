@@ -6,7 +6,7 @@ import {
 } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
 import "./global.css";
-import { Analytics } from "@vercel/analytics/react";
+import { inject } from "@vercel/analytics";
 
 export default component$(() => {
   /**
@@ -28,7 +28,6 @@ export default component$(() => {
         class="bg-base-100 bg-contours bg-transparent bg-opacity-60 bg-fixed"
       >
         <RouterOutlet />
-        <Analytics />
         <ServiceWorkerRegister />
       </body>
     </QwikCityProvider>
