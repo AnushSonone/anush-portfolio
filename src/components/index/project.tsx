@@ -1,13 +1,13 @@
 import { component$ } from "@builder.io/qwik";
 import { BsDot } from "@qwikest/icons/bootstrap";
-import { LuCircleDot, LuExternalLink } from "@qwikest/icons/lucide";
+import { LuExternalLink } from "@qwikest/icons/lucide";
 
 export interface ProjectProps {
   title: string;
   description: string;
   image: string;
   link: string;
-  tags?: string[];
+  tags: string[];
 }
 
 export default component$<ProjectProps>((props) => {
