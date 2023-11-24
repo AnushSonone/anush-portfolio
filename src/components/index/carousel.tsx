@@ -1,4 +1,4 @@
-import { component$, $, useSignal } from "@builder.io/qwik";
+import { component$, $, useSignal, useComputed$ } from "@builder.io/qwik";
 import { LuArrowLeft, LuArrowRight } from "@qwikest/icons/lucide";
 
 export default component$(() => {
@@ -19,7 +19,29 @@ export default component$(() => {
       url: "/about/zion.jpg",
       id: "zion",
     },
+    {
+      url: "/about/adder.jpg",
+      id: "adder",
+    },
+    {
+      url: "/about/griddle.jpg",
+      id: "griddle",
+    },
+    {
+      url: "/about/quack.jpg",
+      id: "quack",
+    },
+    {
+      url: "/about/sushi.jpg",
+      id: "sushi",
+    },
+    {
+      url: "/about/robor2.jpg",
+      id: "robor2",
+    },
   ]);
+  const shownImageIndex = useSignal(0);
+  const image = useComputed$(() => images.value[shownImageIndex.value]);
   const nextImage = $(() => {
     const topImage = images.value.shift();
     images.value = [...images.value, topImage!];
@@ -29,27 +51,28 @@ export default component$(() => {
     images.value = [topImage!, ...images.value];
   });
   return (
-    <div class="grid w-full h-full min-h-0 md:my-0 my-72">
-      {images.value.map((image, index) => (
+    <>
+      <div class="hidden md:grid w-full h-full min-h-0 md:my-0 my-72">
         <img
-          src={image.url}
-          key={image.url}
-          id={image.id}
+          src={image.value.url}
+          key={image.value.id}
           draggable
-          class={`rounded-2xl shadow-md drop-shadow-sm resize-none shadow-gray-500 fixed md:w-3/4 w-screen lg:w-5/12 transition hover:shadow-none place-self-center justify-self-center hover:rotate-3 cursor-pointer hover:scale-[101%] md:h-96 md:object-cover object-contain backdrop-blur-2xl overflow-hidden z-10 md:z-0 -translate-y-[${
-            index * 10 + 30
-          }px] ${index != images.value.length - 1 && "hidden md:block"} `}
-          style={{ zIndex: index }}
+          class="rounded-2xl shadow-md drop-shadow-sm resize-none shadow-gray-500 fixed md:w-3/4 w-screen lg:w-5/12 transition hover:shadow-none place-self-center justify-self-center hover:rotate-3 cursor-pointer hover:scale-[101%] md:h-96 md:object-cover object-contain backdrop-blur-2xl overflow-hidden z-10 md:z-0 "
         />
-      ))}
-      <LuArrowRight
-        class="h-8 w-8 opacity-30 bg-gray-600 rounded-full hover:opacity-100  cursor-pointer transition absolute place-self-center justify-self-end z-10 md:translate-x-0 translate-x-8"
-        onClick$={nextImage}
-      />
-      <LuArrowLeft
-        class="h-8 w-8  opacity-30 bg-gray-600 rounded-full hover:opacity-100  cursor-pointer transition absolute place-self-center justify-self-start z-10 md:translate-x-0 -translate-x-8"
-        onClick$={previousImage}
-      />
-    </div>
+        <LuArrowRight
+          class="h-8 w-8 opacity-30 bg-gray-600 rounded-full hover:opacity-100  cursor-pointer transition absolute place-self-center justify-self-end z-10 md:translate-x-0 translate-x-8"
+          onClick$={nextImage}
+        />
+        <LuArrowLeft
+          class="h-8 w-8  opacity-30 bg-gray-600 rounded-full hover:opacity-100  cursor-pointer transition absolute place-self-center justify-self-start z-10 md:translate-x-0 -translate-x-8"
+          onClick$={previousImage}
+        />
+      </div>
+      <div class="md:hidden columns-2 items-center w-full space-y-4">
+        {images.value.map((image) => (
+          <img src={image.url} key={image.url} id={image.id} draggable />
+        ))}
+      </div>
+    </>
   );
 });
