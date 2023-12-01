@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import {
   QwikCityProvider,
   RouterOutlet,
@@ -15,7 +15,9 @@ export default component$(() => {
    *
    * Don't remove the `<head>` and `<body>` elements.
    */
-  inject();
+  useVisibleTask$(() => {
+    inject();
+  });
   return (
     <QwikCityProvider>
       <head>
