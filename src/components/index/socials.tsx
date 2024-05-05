@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import {
-  BsDiscord,
   BsGithub,
   BsInstagram,
   BsLinkedin,
