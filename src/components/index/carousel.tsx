@@ -12,10 +12,6 @@ export default component$(() => {
       id: "milo",
     },
     {
-      url: "/about/gym.jpg",
-      id: "gym",
-    },
-    {
       url: "/about/intern.jpg",
       id: "intern",
     },

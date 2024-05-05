@@ -31,7 +31,7 @@ export default component$(() => {
           I've been programming ever since I was 15 and am always eager to learn
           everything there is to know about computers as a whole. I'm currently
           attending the <b>University of Texas at Austin</b> where I plan to major in
-          <b>Computer Science</b>. My goal is to give my time and
+          <b> Computer Science</b>. My goal is to give my time and
           energy to both improve our everyday world and share my knowledge with
           others.
           <br />
