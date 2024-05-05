@@ -9,19 +9,18 @@ export interface BlogMeta {
 
 export const blogs: BlogMeta[] = [
   {
-    title: "How I made the Spellsword Loading Animation",
-    date: "8/15/2023",
-    description:
-      "Using the power of SVG properties and a bit of CSS, I made a cool loading animation for my website.",
-    id: "spellsword-loading-animation",
-    image: "/blogs/spellsword-logo.png",
-  },
-  {
-    title: "My college application journey",
-    date: "8/17/2023",
-    description: "",
+    title: "My College Application Journey",
+    date: "5/5/24",
+    description: "How I got into UT Austin and my journey to get there.",
     id: "college-application-journey",
     image: "/blogs/college-application-journey.jpg",
+  },
+  {
+    title: "How I got an internship as a Sophomore in High School",
+    date: "5/5/24",
+    description: "Hyphen Solutions!?",
+    id: "college-application-journey",
+    image: "/comingsoon.jpg",
     inProgress: true,
   },
 ];

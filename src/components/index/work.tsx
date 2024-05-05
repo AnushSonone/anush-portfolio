@@ -4,24 +4,17 @@ import { LuDownload, LuSwords } from "@qwikest/icons/lucide";
 const work = [
   {
     role: "Full Stack Developer",
-    company: "Pipeline AI",
-    image: "/pipeline_ai.webp",
-    from: "July 2023",
-    to: "Present",
-  },
-  {
-    role: "Chief Technical Officer",
-    company: "Arafa Tech Foundation",
-    image: "/arafa_tech.png",
-    from: "February 2023",
-    to: "Present",
-  },
-  {
-    role: "Chief Information Officer",
-    company: "School Simplified",
-    image: "/school_simplified.svg",
+    company: "Hyphen Solutions",
+    image: "/hyphen.jpeg",
     from: "May 2022",
-    to: "January 2023",
+    to: "Present",
+  },
+  {
+    role: "K-12 Game Developer",
+    company: "Edikt Studios",
+    image: "/kcal.png",
+    from: "August 2022",
+    to: "Present",
   },
 ];
 export default component$(() => {
