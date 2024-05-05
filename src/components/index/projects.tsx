@@ -7,7 +7,7 @@ const projects: ProjectProps[] = [
   {
     title: "Hyphen Solutions",
     description:
-      "Building software at the Paypal of the construction world. Developed the entirety of the Payment Method Tab (not open source).",
+      "Developed the entirety of the Payment Method Tab (not open source).",
     image: "/hyphen.jpeg",
     link: "https://wallet.hyphensolutions.com/#home",
     tags: ["react", "css", "sql", "postgres", "node.js"],
