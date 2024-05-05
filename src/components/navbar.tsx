@@ -51,7 +51,7 @@ export default component$(() => {
           </button>
           <section class="flex md:block flex-col justify-center">
             <Link
-              href="https://github.com/lmaosoggypancakes/www.soggypancakes.tech"
+              href="https://github.com/AnushSonone"
               target="_blank"
               class=""
               >
@@ -85,10 +85,10 @@ export default component$(() => {
         </ul>
         <div class="h-1 w-full border-t border-white my-4"></div>
         <div class="flex flex-row justify-end items-center space-x-4">
-          <Link href="https://github.com/lmaosoggypancakes/pancakes.tech">
+          <Link href="https://github.com/AnushSonone">
             <LuGithub class="w-6 h-6" />
           </Link>
-          <Link href="https://linkedin.com/in/josefmacera/">
+          <Link href="https://www.linkedin.com/in/anush-sonone-5b9670214/">
             <LuLinkedin class="w-6 h-6" />
           </Link>
         </div>
