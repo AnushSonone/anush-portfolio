@@ -4,40 +4,24 @@ import { LuArrowLeft, LuArrowRight } from "@qwikest/icons/lucide";
 export default component$(() => {
   const images = useSignal([
     {
-      url: "/about/alpaca.jpg",
-      id: "alpaca",
+      url: "/about/prom.jpg",
+      id: "prom",
     },
     {
-      url: "/about/robor.jpg",
-      id: "robor",
+      url: "/about/milo.jpg",
+      id: "milo",
     },
     {
-      url: "/about/sal.jpg",
-      id: "sal",
+      url: "/about/gym.jpg",
+      id: "gym",
     },
     {
-      url: "/about/zion.jpg",
-      id: "zion",
+      url: "/about/intern.jpg",
+      id: "intern",
     },
     {
-      url: "/about/adder.jpg",
-      id: "adder",
-    },
-    {
-      url: "/about/griddle.jpg",
-      id: "griddle",
-    },
-    {
-      url: "/about/quack.jpg",
-      id: "quack",
-    },
-    {
-      url: "/about/sushi.jpg",
-      id: "sushi",
-    },
-    {
-      url: "/about/robor2.jpg",
-      id: "robor2",
+      url: "/about/read.jpg",
+      id: "read",
     },
   ]);
   const shownImageIndex = useSignal(0);

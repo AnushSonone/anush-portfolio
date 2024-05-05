@@ -17,7 +17,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Josef Macera Portfolio",
+  title: "Anush Sonone Portfolio",
   meta: [
     {
       name: "description",

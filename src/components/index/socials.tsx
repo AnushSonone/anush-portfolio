@@ -9,20 +9,16 @@ import Link from "../link";
 
 const socials = [
   {
-    href: "https://www.instagram.com/lmaojosef/",
+    href: "https://www.instagram.com/milolover314/",
     icon: BsInstagram,
   },
   {
-    href: "https://www.linkedin.com/in/josefmacera/",
+    href: "https://www.linkedin.com/in/anush-sonone-5b9670214/",
     icon: BsLinkedin,
   },
   {
-    href: "https://github.com/lmaosoggypancakes",
+    href: "https://github.com/AnushSonone",
     icon: BsGithub,
-  },
-  {
-    href: "https://discordapp.com/users/729696323615588382",
-    icon: BsDiscord,
   },
 ];
 export default component$(() => {

@@ -5,47 +5,44 @@ import { animate, inView, stagger } from "motion";
 
 const projects: ProjectProps[] = [
   {
-    title: "Spellsword",
+    title: "Hyphen Solutions",
     description:
-      "An interactive, realtime game designed to improve our command of the English language.",
+      "Connecting Builders and Suppliers in real time. The Paypal of the construction world.",
     image: "https://spellsword.xyz/logo.png",
-    link: "https://spellsword.xyz",
+    link: "https://hyphensolutions.com",
     tags: ["nuxt", "tailwindcss", "socket.io", "node.js"],
   },
   {
-    title: "CMUEats",
-    description:
-      "Discover new places to eat on campus, and query open/close times for restaurants!\nTechnical Co-lead through ScottyLabs at CMU.",
+    title: "Coming Soon!",
+    description: "More awesome things to be built at UT Austin.",
     image: "/cmueats.png",
     link: "https://cmueats.com",
     tags: ["react", "mui", "styled-components"],
   },
   {
-    title: "Oinkers",
-    description: "A minimalistic money management platform for kids and teens.",
+    title: "Coming Soon!",
+    description: "More awesome things to be built at UT Austin.",
     tags: ["vue", "capacitor", "typescript", "tailwindcss", "nestjs"],
     image: "/oinkers.png",
     link: "https://play.google.com/store/apps/details?id=me.josefmacera.oinkers",
   },
   {
-    title: "NTRL",
-    description:
-      "Desktop/web application that allows Nevadans to find natural parks in their area.",
+    title: "Coming Soon!",
+    description: "More awesome things to be built at UT Austin.",
     tags: ["vue", "tailwindCSS", "typescript"],
     image: "/ntrl.png",
     link: "https://ntrl.vercel.app",
   },
   {
-    title: "Kody",
-    description: "The Arafa Tech Foundation's Discord Bot",
+    title: "Coming Soon!",
+    description: "More awesome things to be built at UT Austin.",
     tags: ["prisma", "typescript", "railway"],
     image: "/kody.png",
     link: "https://github.com/Arafa-Tech-Foundation/Discord-Bot",
   },
   {
-    title: "Classroom",
-    description:
-      "Classroom management app that allows students to track assignments and communicate with teachers in real time. My CS50 Final Project.",
+    title: "Coming Soon!",
+    description: "More awesome things to be built at UT Austin.",
     tags: ["django", "uvicorn", "javascript"],
     image: "/students.jpg",
     link: "https://github.com/lmaosoggypancakes/classroom",

@@ -27,17 +27,17 @@ export default component$(() => {
       <section class="space-y-4 flex flex-col md:text-left">
         <h1 class="md:text-5xl text-4xl font-bold text-primary">About me</h1>
         <span class="text-xl max-w-4xl mb-8">
-          I'm {new Date().getFullYear() - 2005} years old and from Reno, Nevada.
+          I'm {new Date().getFullYear() - 2006} years old and from Fort Worth, Texas.
           I've been programming ever since I was 15 and am always eager to learn
           everything there is to know about computers as a whole. I'm currently
-          attending Carnegie Mellon University where I plan to major in
-          Electrical and Computer Engineering. My goal is to give my time and
+          attending the University of Texas at Austin where I plan to major in
+          Computer Science. My goal is to give my time and
           energy to both improve our everyday world and share my knowledge with
           others.
           <br />
           <br />
-          Outside of programming, I enjoy practicing jiu-jitsu, playing video
-          games (yes, I play League of Legends), playing the guitar, and
+          Outside of programming, I enjoy powerlifting, playing video
+          games (yes, I play Valorant), playing chess, and
           building computers. You can also catch me listening to hours of
           shoegaze and dream pop.
         </span>

@@ -30,10 +30,10 @@ export default component$(() => {
         />
 
         <h1 class="md:text-7xl text-4xl font-bold text-primary">
-          Hi! I'm Josef :)
+          Hi! I'm Anush :)
         </h1>
         <span class="md:text-5xl text-3xl opacity-50 font-bold max-w-4xl">
-          Developer, Engineer, Roboticist, Teacher
+          Developer, Powerlifter, Engineer
         </span>
         <span class="text-xl max-w-4xl !md:mb-0 !mb-16">
           I'm a passionate software developer and aspiring engineer. I enjoy all
