@@ -21,7 +21,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Welcome! I'm Josef Macera, a software engineer.",
+      content: "Welcome! I'm Anush Sonone, a software engineer.",
     },
   ],
 };

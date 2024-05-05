@@ -30,15 +30,15 @@ export default component$(() => {
           I'm {new Date().getFullYear() - 2006} years old and from Fort Worth, Texas.
           I've been programming ever since I was 15 and am always eager to learn
           everything there is to know about computers as a whole. I'm currently
-          attending the University of Texas at Austin where I plan to major in
-          Computer Science. My goal is to give my time and
+          attending the <b>University of Texas at Austin</b> where I plan to major in
+          <b>Computer Science</b>. My goal is to give my time and
           energy to both improve our everyday world and share my knowledge with
           others.
           <br />
           <br />
           Outside of programming, I enjoy powerlifting, playing video
-          games (yes, I play Valorant), playing chess, and
-          building computers. You can also catch me listening to hours of
+          games (yes, I play League of Legends), working out, and
+          playing racquetball. You can also catch me listening to hours of
           shoegaze and dream pop.
         </span>
       </section>

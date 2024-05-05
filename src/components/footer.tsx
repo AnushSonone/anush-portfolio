@@ -31,7 +31,7 @@ export default component$(() => {
           ))}
         </ul>
         <span class="opacity-50 font-normal sm:mt-0 mt-4 text-center md:text-left">
-          © {new Date().getFullYear()} Josef Macera. All rights reserved.
+          © {new Date().getFullYear()} Anush Sonone. All rights reserved.
         </span>
       </div>
     </footer>
