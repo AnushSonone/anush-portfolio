@@ -11,9 +11,9 @@ export const blogs: BlogMeta[] = [
   {
     title: "My College Application Journey!",
     date: "5/5/24",
-    description: "How I got into UT Austin CS and my journey to get there.",
+    description: "How I got into UT Austin CS and my 14 other rejections.",
     id: "college-application-journey",
-    image: "/blogs/college-application-journey.jpg",
+    image: "/blogs/college-application-journey.png",
   },
   {
     title: "Landing a SWE internship at Hyphen Solutions.",
@@ -23,9 +23,9 @@ export const blogs: BlogMeta[] = [
     image: "/blogs/hyphensolutions.png",
   },
   {
-    title: "Building the Payment Method Tab at Hyphen Solutions.",
+    title: "Processing Payment Methods at Hyphen Solutions.",
     date: "5/5/24",
-    description: "How exactly are payments processed at an SaaS company?",
+    description: "How exactly do databases work at an SaaS company?",
     id: "payment-method",
     image: "/blogs/payments.jpg",
   },
