@@ -12,8 +12,15 @@ const work = [
   {
     role: "K-12 Game Developer",
     company: "Edikt Studios",
-    image: "/kcal.png",
+    image: "/kisd.png",
     from: "August 2022",
+    to: "Present",
+  },
+  {
+    role: "Grade School Tutor",
+    company: "Gideon Math & Reading",
+    image: "/gideon.jpeg",
+    from: "June 2020",
     to: "Present",
   },
 ];

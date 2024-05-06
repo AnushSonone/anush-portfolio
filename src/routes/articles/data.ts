@@ -9,6 +9,13 @@ export interface BlogMeta {
 
 export const blogs: BlogMeta[] = [
   {
+    title: "Building the Wallet Payment Method Tab at Hyphen Solutions.",
+    date: "5/5/24",
+    description: "How exactly do payments work at an SaaS company?",
+    id: "payment-method",
+    image: "/blogs/payments.jpg",
+  },
+  {
     title: "My College Application Journey!",
     date: "5/5/24",
     description: "How I got into UT Austin CS and my 14 other rejections.",
@@ -21,12 +28,5 @@ export const blogs: BlogMeta[] = [
     description: "How I earned a paid SWE Internship in high school.",
     id: "internship-journey",
     image: "/blogs/hyphensolutions.png",
-  },
-  {
-    title: "Processing Payment Methods at Hyphen Solutions.",
-    date: "5/5/24",
-    description: "How exactly do databases work at an SaaS company?",
-    id: "payment-method",
-    image: "/blogs/payments.jpg",
   },
 ];
