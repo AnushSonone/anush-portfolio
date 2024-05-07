@@ -9,8 +9,8 @@ export interface BlogMeta {
 
 export const blogs: BlogMeta[] = [
   {
-    title: "My College Application Journey!",
-    date: "5/5/24",
+    title: "How I got into UT Austin Computer Science with a 3% Acceptance Rate",
+    date: "5/6/24",
     description: "How I got into UT Austin CS and my 11 other rejections.",
     id: "college-application-journey",
     image: "/blogs/college-application-journey.png",
@@ -25,7 +25,7 @@ export const blogs: BlogMeta[] = [
   },
   {
     title: "Landing a SWE internship at Hyphen Solutions.",
-    date: "5/5/24",
+    date: "5/6/24",
     description: "How I earned a paid SWE Internship in high school.",
     id: "internship-journey",
     image: "/blogs/hyphensolutions.png",
