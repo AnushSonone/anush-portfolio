@@ -8,16 +8,16 @@ export default component$(() => {
       id: "prom",
     },
     {
+      url: "/about/read.jpg",
+      id: "read",
+    },
+    {
       url: "/about/milo.jpg",
       id: "milo",
     },
     {
       url: "/about/intern.jpg",
       id: "intern",
-    },
-    {
-      url: "/about/read.jpg",
-      id: "read",
     },
   ]);
   const shownImageIndex = useSignal(0);
