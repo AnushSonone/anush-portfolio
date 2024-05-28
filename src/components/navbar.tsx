@@ -88,7 +88,7 @@ export default component$(() => {
           <Link href="https://github.com/AnushSonone">
             <LuGithub class="w-6 h-6" />
           </Link>
-          <Link href="https://www.linkedin.com/in/anush-sonone-5b9670214/">
+          <Link href="https://www.linkedin.com/in/anushse/">
             <LuLinkedin class="w-6 h-6" />
           </Link>
         </div>
