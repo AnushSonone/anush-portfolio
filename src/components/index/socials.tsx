@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import {
   BsGithub,
-  BsInstagram,
   BsLinkedin,
 } from "@qwikest/icons/bootstrap";
 import Link from "../link";
