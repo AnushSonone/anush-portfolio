@@ -13,15 +13,15 @@ const work = [
     role: "K-12 Game Developer",
     company: "Edikt Studios",
     image: "/kisd.png",
-    from: "August 2022",
-    to: "Present",
+    from: "August 2021",
+    to: "May 2022",
   },
   {
     role: "Grade School Tutor",
     company: "Gideon Math & Reading",
     image: "/gideon.jpeg",
     from: "June 2020",
-    to: "Present",
+    to: "August 2024",
   },
 ];
 export default component$(() => {

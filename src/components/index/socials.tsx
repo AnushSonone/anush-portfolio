@@ -8,10 +8,6 @@ import Link from "../link";
 
 const socials = [
   {
-    href: "https://www.instagram.com/milolover314/",
-    icon: BsInstagram,
-  },
-  {
     href: "https://www.linkedin.com/in/anushse/",
     icon: BsLinkedin,
   },
