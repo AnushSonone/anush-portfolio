@@ -26,7 +26,7 @@ export const blogs: BlogMeta[] = [
   {
     title: "Landing a SWE internship at Hyphen Solutions.",
     date: "5/6/24",
-    description: "How I earned a paid SWE Internship in high school.",
+    description: "How I got a paid SWE Internship in high school.",
     id: "internship-journey",
     image: "/blogs/hyphensolutions.png",
     inProgress: true,

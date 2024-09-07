@@ -12,7 +12,7 @@ const socials = [
     icon: BsInstagram,
   },
   {
-    href: "https://www.linkedin.com/in/anush-sonone-5b9670214/",
+    href: "https://www.linkedin.com/in/anushse/",
     icon: BsLinkedin,
   },
   {
