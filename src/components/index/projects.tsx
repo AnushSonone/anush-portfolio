@@ -16,7 +16,7 @@ const projects: ProjectProps[] = [
     title: "CDK Global",
     description: "Built the Fortellis Team's Super Admin UI. Also not open source.",
     image: "/cdk.jpg",
-    link: "",
+    link: "https://fortellis.io/",
     tags: ["javascript", "aws", "react", "dynamodb", "node.js", "css"],
   },
   {
