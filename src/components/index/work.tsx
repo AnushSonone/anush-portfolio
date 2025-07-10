@@ -3,25 +3,25 @@ import { LuDownload, LuSwords } from "@qwikest/icons/lucide";
 
 const work = [
   {
-    role: "Full Stack Developer",
-    company: "Hyphen Solutions",
-    image: "/hyphen.jpeg",
-    from: "May 2022",
+    role: "SWE Intern",
+    company: "CDK Global",
+    image: "/cdk.jpeg",
+    from: "June 2025",
     to: "Present",
   },
   {
-    role: "K-12 Game Developer",
-    company: "Edikt Studios",
-    image: "/kisd.png",
-    from: "August 2021",
-    to: "May 2022",
+    role: "Undergraduate Researcher",
+    company: "The University of Texas at Austin",
+    image: "/ut.jpeg",
+    from: "June 2025",
+    to: "Present",
   },
   {
-    role: "Grade School Tutor",
-    company: "Gideon Math & Reading",
-    image: "/gideon.jpeg",
-    from: "June 2020",
-    to: "August 2024",
+    role: "SWE Intern",
+    company: "Hyphen Solutions",
+    image: "/hyphen.jpeg",
+    from: "May 2022",
+    to: "May 2025",
   },
 ];
 export default component$(() => {
