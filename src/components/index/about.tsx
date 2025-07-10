@@ -37,9 +37,9 @@ export default component$(() => {
           <br />
           <br />
           Outside of programming, I enjoy powerlifting, playing video
-          games (yes, I play League of Legends), working out, and
-          playing racquetball. You can also catch me listening to hours of
-          shoegaze and dream pop.
+          games (yes, I play Valorant), working out, and
+          playing racquetball. You can also catch me listening to hours of 
+          Beach House and BETWEEN FRIENDS.
         </span>
       </section>
       <Carousel />
