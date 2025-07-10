@@ -5,14 +5,14 @@ const work = [
   {
     role: "SWE Intern",
     company: "CDK Global",
-    image: "/cdk.jpeg",
+    image: "/cdk.jpg",
     from: "June 2025",
     to: "Present",
   },
   {
     role: "Undergraduate Researcher",
     company: "The University of Texas at Austin",
-    image: "/ut.jpeg",
+    image: "/ut.jpg",
     from: "June 2025",
     to: "Present",
   },
