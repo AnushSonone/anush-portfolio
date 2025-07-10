@@ -13,11 +13,11 @@ const projects: ProjectProps[] = [
     tags: ["react", "css", "sql", "postgres", "node.js"],
   },
   {
-    title: "Coming Soon!",
-    description: "More awesome things to be built at UT Austin.",
-    image: "/comingsoon.jpg",
+    title: "CDK Global",
+    description: "Built the Fortellis Team's Super Admin UI. Also not open source.",
+    image: "/cdk.jpg",
     link: "",
-    tags: ["react", "mui", "styled-components"],
+    tags: ["javascript", "aws", "react", "dynamodb", "node.js", "css"],
   },
   {
     title: "Coming Soon!",
