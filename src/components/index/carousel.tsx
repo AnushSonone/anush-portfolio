@@ -1,4 +1,5 @@
-import { component$, $, useSignal, useComputed$ } from "@builder.io/qwik";
+
+import ImgProm from '~/media/about/prom.jpg?jsx';import { component$, $, useSignal, useComputed$ } from "@builder.io/qwik";
 import { LuArrowLeft, LuArrowRight } from "@qwikest/icons/lucide";
 
 export default component$(() => {
@@ -33,8 +34,7 @@ export default component$(() => {
   return (
     <>
       <div class="hidden md:grid w-full h-full min-h-0 md:my-0 my-72">
-        <img
-          src={image.value.url}
+        <ImgProm
           key={image.value.id}
           draggable
           class="rounded-2xl shadow-md drop-shadow-sm resize-none shadow-gray-500 fixed md:w-3/4 w-screen lg:w-5/12 transition hover:shadow-none place-self-center justify-self-center hover:rotate-3 cursor-pointer hover:scale-[101%] md:h-96 md:object-cover object-contain backdrop-blur-2xl overflow-hidden z-10 md:z-0 "

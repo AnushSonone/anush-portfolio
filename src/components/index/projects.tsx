@@ -13,19 +13,19 @@ const projects: ProjectProps[] = [
     tags: ["ai", "crm", "wealth management", "automation", "lead generation"],
   },
   {
+    title: "CDK Global",
+    description: "Built the Fortellis Team's Super Admin UI. Also not open source.",
+    image: "/cdk.jpg",
+    link: "https://fortellis.io/",
+    tags: ["javascript", "aws", "react", "dynamodb", "node.js", "css"],
+  },
+  {
     title: "Hyphen Solutions",
     description:
       "Built the Wallet division's Payment Method Tab. Not open source.",
     image: "/hyphen.jpeg",
     link: "https://wallet.hyphensolutions.com/#home",
     tags: ["react", "css", "sql", "postgres", "node.js"],
-  },
-  {
-    title: "CDK Global",
-    description: "Built the Fortellis Team's Super Admin UI. Also not open source.",
-    image: "/cdk.jpg",
-    link: "https://fortellis.io/",
-    tags: ["javascript", "aws", "react", "dynamodb", "node.js", "css"],
   },
   {
     title: "Coming Soon!",
