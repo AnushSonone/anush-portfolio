@@ -5,6 +5,14 @@ import { animate, inView, stagger } from "motion";
 
 const projects: ProjectProps[] = [
   {
+    title: "Profluento",
+    description:
+      "AI-powered CRM for Wealth Managers that Generates Leads and Streamlines Business Workflows with Intelligent Automation.",
+    image: "/profluento.svg",
+    link: "https://profluento.dev/",
+    tags: ["ai", "crm", "wealth management", "automation", "lead generation"],
+  },
+  {
     title: "Hyphen Solutions",
     description:
       "Built the Wallet division's Payment Method Tab. Not open source.",
@@ -18,13 +26,6 @@ const projects: ProjectProps[] = [
     image: "/cdk.jpg",
     link: "https://fortellis.io/",
     tags: ["javascript", "aws", "react", "dynamodb", "node.js", "css"],
-  },
-  {
-    title: "Coming Soon!",
-    description: "More awesome things to be built at UT Austin.",
-    tags: ["vue", "capacitor", "typescript", "tailwindcss", "nestjs"],
-    image: "/comingsoon.jpg",
-    link: "",
   },
   {
     title: "Coming Soon!",

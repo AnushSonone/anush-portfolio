@@ -19,7 +19,7 @@ export default component$<ProjectProps>((props) => {
     >
       <img
         src={props.image}
-        class="h-24 w-24 rounded-l-md bg-white object-contain"
+        class="h-24 w-24 rounded-md bg-white object-contain"
       />
       <h3 class="text-3xl font-semibold mt-8">{props.title}</h3>
       <p class="text-sm">{props.description}</p>
