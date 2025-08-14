@@ -1,5 +1,5 @@
 
-import ImgProm from '~/media/about/prom.jpg?jsx';import { component$, $, useSignal, useComputed$ } from "@builder.io/qwik";
+import { component$, $, useSignal, useComputed$ } from "@builder.io/qwik";
 import { LuArrowLeft, LuArrowRight } from "@qwikest/icons/lucide";
 
 export default component$(() => {
@@ -23,20 +23,24 @@ export default component$(() => {
   ]);
   const shownImageIndex = useSignal(0);
   const image = useComputed$(() => images.value[shownImageIndex.value]);
+  
   const nextImage = $(() => {
-    const topImage = images.value.shift();
-    images.value = [...images.value, topImage!];
+    shownImageIndex.value = (shownImageIndex.value + 1) % images.value.length;
   });
+  
   const previousImage = $(() => {
-    const topImage = images.value.pop();
-    images.value = [topImage!, ...images.value];
+    shownImageIndex.value = (shownImageIndex.value - 1 + images.value.length) % images.value.length;
   });
+  
   return (
     <>
       <div class="hidden md:grid w-full h-full min-h-0 md:my-0 my-72">
-        <ImgProm
+        <img
+          src={image.value.url}
           key={image.value.id}
           draggable
+          width="4032"
+          height="3024"
           class="rounded-2xl shadow-md drop-shadow-sm resize-none shadow-gray-500 fixed md:w-3/4 w-screen lg:w-5/12 transition hover:shadow-none place-self-center justify-self-center hover:rotate-3 cursor-pointer hover:scale-[101%] md:h-96 md:object-cover object-contain backdrop-blur-2xl overflow-hidden z-10 md:z-0 "
         />
         <LuArrowRight
@@ -50,7 +54,7 @@ export default component$(() => {
       </div>
       <div class="md:hidden columns-2 items-center w-full space-y-4">
         {images.value.map((image) => (
-          <img src={image.url} key={image.url} id={image.id} draggable />
+          <img src={image.url} key={image.url} id={image.id} draggable width="4032" height="3024" />
         ))}
       </div>
     </>
