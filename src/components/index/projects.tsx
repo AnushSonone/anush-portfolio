@@ -7,8 +7,8 @@ const projects: ProjectProps[] = [
   {
     title: "Profluento",
     description:
-      "AI-powered CRM for Wealth Managers that Generates Leads and Streamlines Business Workflows with Intelligent Automation.",
-    image: "/profluento.svg",
+      "The Next Generation of Wealth Management.",
+    image: "/profluento.png",
     link: "https://profluento.dev/",
     tags: ["ai", "crm", "wealth management", "automation", "lead generation"],
   },

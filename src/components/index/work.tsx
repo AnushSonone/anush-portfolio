@@ -3,21 +3,35 @@ import { LuDownload, LuSwords } from "@qwikest/icons/lucide";
 
 const work = [
   {
-    role: "Undergraduate Researcher",
-    company: "The University of Texas at Austin",
-    image: "/ut.jpg",
-    from: "June 2025",
+    role: "Open Source Software Developer",
+    company: "Meta",
+    image: "/meta.png",
+    from: "January 2025",
     to: "Present",
   },
   {
-    role: "SWE Intern",
+    role: "Visa Fintech Foundations Fellow",
+    company: "Visa",
+    image: "/visa.png",
+    from: "September 2025",
+    to: "Present",
+  },
+  {
+    role: "Co-Founder & Lead Engineer",
+    company: "Profluento",
+    image: "/profluento.png",
+    from: "August 2025",
+    to: "Present",
+  },
+  {
+    role: "Software Engineer Intern",
     company: "CDK Global",
     image: "/cdk.jpg",
     from: "June 2025",
     to: "August 2025",
   },
   {
-    role: "SWE Intern",
+    role: "Software Engineer Intern",
     company: "Hyphen Solutions",
     image: "/hyphen.jpeg",
     from: "May 2022",
