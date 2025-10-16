@@ -1,109 +1,204 @@
-# Qwik City App ⚡️
+# Anush Sonone - Portfolio
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+A minimalistic, fast, and accessible personal website built with pure HTML, CSS, and vanilla JavaScript.
+
+## 🚀 Features
+
+- **Zero frameworks** - Pure HTML, CSS, and vanilla JS
+- **Lightning fast** - Under 100 KB total page weight (without images)
+- **Accessible** - Built with semantic HTML and ARIA best practices
+- **SEO optimized** - Meta tags, sitemap, and robots.txt included
+- **Mobile first** - Responsive design that works on all devices
+- **Client-side routing** - Hash-based routing without page reloads
+
+## 📁 Project Structure
+
+```
+/
+├── index.html          # Main shell with header, nav, footer
+├── pages/              # Page partials loaded by router
+│   ├── home.html
+│   ├── about.html
+│   ├── projects.html
+│   ├── writing.html
+│   └── contact.html
+├── css/
+│   └── styles.css      # Single stylesheet (~150 lines)
+├── js/
+│   └── router.js       # Client-side hash router (~80 lines)
+├── assets/
+│   ├── favicon.svg
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   └── resume.pdf
+└── README.md
+```
+
+## 🛠️ How It Works
+
+### Routing
+
+The site uses hash-based routing (`#/`, `#/about`, etc.) to provide a single-page application experience without a build step.
+
+**Routes:**
+- `#/` or `#` → `pages/home.html`
+- `#/about` → `pages/about.html`
+- `#/projects` → `pages/projects.html`
+- `#/writing` → `pages/writing.html`
+- `#/contact` → `pages/contact.html`
+
+The router (`js/router.js`):
+1. Listens for `hashchange` events
+2. Fetches the corresponding HTML partial
+3. Injects it into `<main id="app">`
+4. Updates the page title and active nav link
+5. Caches pages in memory for instant subsequent loads
+
+### Adding a New Page
+
+1. Create a new HTML file in `/pages/` (e.g., `pages/blog.html`)
+2. Add route mapping in `js/router.js`:
+   ```javascript
+   routes: {
+     // ... existing routes
+     '/blog': '/pages/blog.html'
+   }
+   ```
+3. Add title mapping:
+   ```javascript
+   titles: {
+     // ... existing titles
+     '/blog': 'Blog - Anush Sonone'
+   }
+   ```
+4. Add navigation link in `index.html`:
+   ```html
+   <a href="#/blog" class="nav-link" data-route="/blog">Blog</a>
+   ```
+5. Update `assets/sitemap.xml` with the new route
+
+## 🎨 Design System
+
+### Colors
+- Text: `#111`
+- Background: `#fff`
+- Muted: `#666`
+- Borders: `#e5e7eb`
+- Accent: `#0ea5e9`
+
+### Typography
+- Font: System stack (`-apple-system, Segoe UI, Roboto, etc.`)
+- Sizes: `h1: 28px`, `h2: 20px`, `body: 16px`
+- Line height: `1.6`
+
+### Spacing Scale
+- `4px, 8px, 12px, 16px, 24px, 32px`
+
+### Components
+- `.btn` - Primary button
+- `.btn-secondary` - Secondary button with outline
+- `.card` - Content card with hover effect
+- `.tag` - Small colored tag for tech stacks
+
+## 🚢 Deployment
+
+### GitHub Pages
+
+1. Push your code to GitHub
+2. Go to repository Settings → Pages
+3. Set source to `main` branch, `/` (root)
+4. Your site will be live at `https://username.github.io/repo-name`
+
+**Note:** If deploying to a subdirectory, update all paths in `index.html` and `js/router.js` to include the base path.
+
+### Vercel
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` in your project directory
+3. Follow the prompts
+4. Your site will be live at `https://your-project.vercel.app`
+
+**Or use the Vercel dashboard:**
+1. Go to [vercel.com](https://vercel.com)
+2. Import your GitHub repository
+3. Deploy with default settings
+
+### Netlify
+
+1. Drag and drop your project folder to [app.netlify.com/drop](https://app.netlify.com/drop)
+2. Or connect your GitHub repository
+3. Deploy with default settings
+
+**All static hosts work** - This is just HTML/CSS/JS, so it works anywhere.
+
+## 🔧 Local Development
+
+No build step required! Just open `index.html` in your browser.
+
+For a better development experience with proper URLs, use a local server:
+
+```bash
+# Python 3
+python3 -m http.server 8000
+
+# Node.js (if you have npx)
+npx serve
+
+# PHP
+php -S localhost:8000
+```
+
+Then visit `http://localhost:8000`
+
+## ✅ Performance Checklist
+
+- [x] No external dependencies or frameworks
+- [x] Single CSS file, single JS file
+- [x] System fonts only (no web fonts)
+- [x] Semantic HTML with proper landmarks
+- [x] Accessible navigation with keyboard support
+- [x] Visible focus states
+- [x] Proper heading hierarchy
+- [x] Meta tags for SEO and social sharing
+- [x] Sitemap and robots.txt
+- [x] Mobile-first responsive design
+- [x] Print stylesheet
+- [x] Page caching for instant navigation
+
+## 📝 TODOs
+
+Current placeholders to fill in:
+
+- [ ] Add actual email address in `pages/contact.html`
+- [ ] Update social media links in `pages/contact.html`
+- [ ] Add headshot image in `pages/about.html` (optional)
+- [ ] Add actual blog post links in `pages/writing.html`
+- [ ] Update domain in `index.html` meta tags
+- [ ] Add OG image (`og-image.png`) in `/assets/`
+
+## 📊 Lighthouse Scores
+
+Target: **95+ across all metrics**
+
+Run audit: `Chrome DevTools → Lighthouse → Generate report`
+
+Expected scores:
+- Performance: 98+
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+
+## 📄 License
+
+MIT License - feel free to use this as a template for your own site.
+
+## 🤝 Contact
+
+Anush Sonone
+- Email: [Add your email]
+- LinkedIn: [linkedin.com/in/anushsonone](https://linkedin.com/in/anushsonone)
+- GitHub: [github.com/anushsonone](https://github.com/anushsonone)
 
 ---
 
-## Project Structure
-
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
-
-Inside your project, you'll see the following directory structure:
-
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
-
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
-
-- `src/components`: Recommended directory for components.
-
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/.html#the-public-directory) for more info.
-
-## Add Integrations and deployment
-
-Use the `npm run qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
-
-```shell
-npm run qwik add # or `yarn qwik add`
-```
-
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
-
-```shell
-npm start # or `yarn start`
-```
-
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
-
-## Preview
-
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
-
-```shell
-npm run preview # or `yarn preview`
-```
-
-## Production
-
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
-
-```shell
-npm run build # or `yarn build`
-```
-
-## Vercel Edge
-
-This starter site is configured to deploy to [Vercel Edge Functions](https://vercel.com/docs/concepts/functions/edge-functions), which means it will be rendered at an edge location near to your users.
-
-## Installation
-
-The adaptor will add a new `vite.config.ts` within the `adapters/` directory, and a new entry file will be created, such as:
-
-```
-└── adapters/
-    └── vercel-edge/
-        └── vite.config.ts
-└── src/
-    └── entry.vercel-edge.tsx
-```
-
-Additionally, within the `package.json`, the `build.server` script will be updated with the Vercel Edge build.
-
-## Production build
-
-To build the application for production, use the `build` command, this command will automatically run `npm run build.server` and `npm run build.client`:
-
-```shell
-npm run build
-```
-
-[Read the full guide here](https://github.com/BuilderIO/qwik/blob/main/starters/adapters/vercel-edge/README.md)
-
-## Dev deploy
-
-To deploy the application for development:
-
-```shell
-npm run deploy
-```
-
-Notice that you might need a [Vercel account](https://docs.Vercel.com/get-started/) in order to complete this step!
-
-## Production deploy
-
-The project is ready to be deployed to Vercel. However, you will need to create a git repository and push the code to it.
-
-You can [deploy your site to Vercel](https://vercel.com/docs/concepts/deployments/overview) either via a Git provider integration or through the Vercel CLI.
+Built with ❤️ using HTML, CSS, and JavaScript.
