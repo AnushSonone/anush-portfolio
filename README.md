@@ -1,38 +1,47 @@
-# Anush Sonone - Portfolio
+# anush.wiki
 
-A minimalistic, fast, and accessible personal website built with pure HTML, CSS, and vanilla JavaScript.
+Minimalist personal website built with pure HTML, CSS, and vanilla JavaScript. No frameworks, no build process, just clean code.
+
+**Live Site:** [https://anush.wiki](https://anush.wiki)
 
 ## 🚀 Features
 
 - **Zero frameworks** - Pure HTML, CSS, and vanilla JS
-- **Lightning fast** - Under 100 KB total page weight (without images)
-- **Accessible** - Built with semantic HTML and ARIA best practices
-- **SEO optimized** - Meta tags, sitemap, and robots.txt included
-- **Mobile first** - Responsive design that works on all devices
-- **Client-side routing** - Hash-based routing without page reloads
+- **Zero build process** - No npm, no bundlers, no compilation
+- **~14 KB total** - Entire site (HTML/CSS/JS combined)
+- **Brutalist design** - Inspired by [motherfuckingwebsite.com](https://motherfuckingwebsite.com)
+- **Lightning fast** - Lighthouse 95+ across all metrics
+- **SEO optimized** - Canonical tags, sitemap, robots.txt
+- **Secure** - HSTS, CSP, and security headers via Vercel
+- **Client-side routing** - Hash-based SPA without page reloads
 
 ## 📁 Project Structure
 
 ```
 /
-├── index.html          # Main shell with header, nav, footer
-├── pages/              # Page partials loaded by router
+├── index.html              # Main entry point (1.5 KB)
+├── css/
+│   └── styles.css          # Single stylesheet (6.3 KB)
+├── js/
+│   └── router.js           # Hash-based router (2.8 KB)
+├── pages/                  # Page partials loaded by router
 │   ├── home.html
-│   ├── about.html
 │   ├── projects.html
 │   ├── writing.html
 │   └── contact.html
-├── css/
-│   └── styles.css      # Single stylesheet (~150 lines)
-├── js/
-│   └── router.js       # Client-side hash router (~80 lines)
 ├── assets/
-│   ├── favicon.svg
+│   ├── favicon.svg         # Simple "A" lettermark
+│   ├── resume.pdf
 │   ├── robots.txt
-│   ├── sitemap.xml
-│   └── resume.pdf
+│   └── sitemap.xml
+├── public/                 # Images and static assets
+├── robots.txt              # Root robots.txt for SEO
+├── sitemap.xml             # Root sitemap for SEO
+├── vercel.json             # Vercel deployment config
 └── README.md
 ```
+
+**Total size:** ~14 KB for all HTML/CSS/JS combined
 
 ## 🛠️ How It Works
 
@@ -41,8 +50,7 @@ A minimalistic, fast, and accessible personal website built with pure HTML, CSS,
 The site uses hash-based routing (`#/`, `#/about`, etc.) to provide a single-page application experience without a build step.
 
 **Routes:**
-- `#/` or `#` → `pages/home.html`
-- `#/about` → `pages/about.html`
+- `#/` → `pages/home.html`
 - `#/projects` → `pages/projects.html`
 - `#/writing` → `pages/writing.html`
 - `#/contact` → `pages/contact.html`
@@ -51,8 +59,9 @@ The router (`js/router.js`):
 1. Listens for `hashchange` events
 2. Fetches the corresponding HTML partial
 3. Injects it into `<main id="app">`
-4. Updates the page title and active nav link
-5. Caches pages in memory for instant subsequent loads
+4. Updates page title and canonical URL dynamically
+5. Updates active nav link styling
+6. Caches pages in memory for instant subsequent loads
 
 ### Adding a New Page
 
@@ -64,72 +73,86 @@ The router (`js/router.js`):
      '/blog': '/pages/blog.html'
    }
    ```
-3. Add title mapping:
+3. Add title and canonical mappings:
    ```javascript
    titles: {
-     // ... existing titles
      '/blog': 'Blog - Anush Sonone'
+   }
+   canonicals: {
+     '/blog': 'https://anush.wiki/#/blog'
    }
    ```
 4. Add navigation link in `index.html`:
    ```html
    <a href="#/blog" class="nav-link" data-route="/blog">Blog</a>
    ```
-5. Update `assets/sitemap.xml` with the new route
+5. Update `sitemap.xml` with the new route
 
-## 🎨 Design System
+## 🎨 Design Philosophy
 
-### Colors
-- Text: `#111`
-- Background: `#fff`
-- Muted: `#666`
-- Borders: `#e5e7eb`
-- Accent: `#0ea5e9`
+### Minimalism
+Inspired by [motherfuckingwebsite.com](https://motherfuckingwebsite.com) - brutally simple, no unnecessary styling.
 
 ### Typography
-- Font: System stack (`-apple-system, Segoe UI, Roboto, etc.`)
-- Sizes: `h1: 28px`, `h2: 20px`, `body: 16px`
-- Line height: `1.6`
+- **Font**: Georgia serif (system font, zero network requests)
+- **Sizes**: `h1: 24px`, `h2: 20px`, `body: 16px`
+- **Weight**: Normal (no bold headings)
+- **Line height**: `1.6`
+- **Max width**: 650px
 
-### Spacing Scale
-- `4px, 8px, 12px, 16px, 24px, 32px`
+### Colors
+- **Text**: Pure black `#000`
+- **Background**: Pure white `#fff`
+- **Muted**: `#555`
+- **Borders**: Black `#000`
+- **Links**: Black with underline (no hover effects)
 
-### Components
-- `.btn` - Primary button
-- `.btn-secondary` - Secondary button with outline
-- `.card` - Content card with hover effect
-- `.tag` - Small colored tag for tech stacks
+### Layout
+- Simple border-left for "cards"
+- No shadows, no transitions, no animations
+- No rounded corners (except images)
+- Maximum whitespace
 
 ## 🚢 Deployment
 
-### GitHub Pages
+### Vercel (Current Setup)
 
-1. Push your code to GitHub
-2. Go to repository Settings → Pages
-3. Set source to `main` branch, `/` (root)
-4. Your site will be live at `https://username.github.io/repo-name`
+**Domain:** https://anush.wiki
 
-**Note:** If deploying to a subdirectory, update all paths in `index.html` and `js/router.js` to include the base path.
+**Configuration:**
+```json
+{
+  "buildCommand": null,
+  "installCommand": null,
+  "cleanUrls": true,
+  "headers": [...security headers...],
+  "redirects": [...],
+  "rewrites": [...]
+}
+```
 
-### Vercel
+**Deployment Settings:**
+- Framework: Other
+- Build Command: (blank)
+- Install Command: (blank)
+- Output Directory: `.` (root)
 
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run `vercel` in your project directory
-3. Follow the prompts
-4. Your site will be live at your custom domain (e.g., `https://anush.wiki`)
+**DNS:**
+```
+A     @ → 76.76.21.21
+CNAME www → cname.vercel-dns.com
+```
 
-**Or use the Vercel dashboard:**
-1. Go to [vercel.com](https://vercel.com)
-2. Import your GitHub repository
-3. Deploy with default settings
+### Other Hosts
 
-### Netlify
+Since this is pure static HTML/CSS/JS, it works on **any static host**:
+- GitHub Pages
+- Netlify
+- Cloudflare Pages
+- AWS S3 + CloudFront
+- Or literally any web server
 
-1. Drag and drop your project folder to [app.netlify.com/drop](https://app.netlify.com/drop)
-2. Or connect your GitHub repository
-3. Deploy with default settings
-
-**All static hosts work** - This is just HTML/CSS/JS, so it works anywhere.
+Just upload the files and point to `index.html`.
 
 ## 🔧 Local Development
 
@@ -165,16 +188,25 @@ Then visit `http://localhost:8000`
 - [x] Print stylesheet
 - [x] Page caching for instant navigation
 
-## 📝 TODOs
+## 🔒 Security
 
-Current placeholders to fill in:
+Security headers automatically applied via `vercel.json`:
+- ✅ Strict-Transport-Security (HSTS) - 2 year max-age with preload
+- ✅ X-Frame-Options: DENY (prevents clickjacking)
+- ✅ X-Content-Type-Options: nosniff
+- ✅ Referrer-Policy: strict-origin-when-cross-origin
+- ✅ Permissions-Policy (blocks geolocation, mic, camera)
+- ✅ Content-Security-Policy (allows self-hosted + inline)
 
-- [ ] Add actual email address in `pages/contact.html`
-- [ ] Update social media links in `pages/contact.html`
-- [ ] Add headshot image in `pages/about.html` (optional)
-- [ ] Add actual blog post links in `pages/writing.html`
-- [ ] Update domain in `index.html` meta tags
-- [ ] Add OG image (`og-image.png`) in `/assets/`
+## 📊 SEO
+
+- ✅ Canonical URLs (dynamically updated by router)
+- ✅ Open Graph metadata (og:title, og:description, og:image, og:url)
+- ✅ Twitter Cards (summary_large_image)
+- ✅ Sitemap at `/sitemap.xml`
+- ✅ Robots.txt at `/robots.txt`
+- ✅ Semantic HTML with proper landmarks
+- ✅ Meta descriptions
 
 ## 📊 Lighthouse Scores
 
@@ -192,13 +224,25 @@ Expected scores:
 
 MIT License - feel free to use this as a template for your own site.
 
-## 🤝 Contact
+## 📈 Performance
 
-Anush Sonone
-- Email: [Add your email]
-- LinkedIn: [linkedin.com/in/anushsonone](https://linkedin.com/in/anushsonone)
-- GitHub: [github.com/anushsonone](https://github.com/anushsonone)
+- **Total size:** 13.5 KB (all HTML/CSS/JS)
+- **No dependencies:** Zero npm packages
+- **No build time:** Instant deployments
+- **Load time:** < 100ms on fast connections
+- **Lighthouse:** 95+ across all metrics
+
+## 🗂️ Repository
+
+- **Live site:** [anush.wiki](https://anush.wiki)
+- **Repository:** [github.com/AnushSonone/anush-portfolio](https://github.com/AnushSonone/anush-portfolio)
+- **Old Qwik site:** See `old-website` branch
+
+## 📄 License
+
+MIT License - feel free to use as a template.
 
 ---
 
-Built with ❤️ using HTML, CSS, and JavaScript.
+**Built with vanilla HTML, CSS, and JavaScript.**  
+Heavily inspired by [motherfuckingwebsite.com](https://motherfuckingwebsite.com)
