@@ -20,6 +20,13 @@ const router = {
     '/contact': 'Contact - Anush Sonone'
   },
 
+  canonicals: {
+    '/': 'https://anush.wiki',
+    '/projects': 'https://anush.wiki/#/projects',
+    '/writing': 'https://anush.wiki/#/writing',
+    '/contact': 'https://anush.wiki/#/contact'
+  },
+
   /**
    * Load and render a route
    */
@@ -55,6 +62,9 @@ const router = {
       // Update document title
       document.title = this.titles[path] || 'Anush Sonone';
       
+      // Update canonical URL
+      this.updateCanonical(path);
+      
       // Update active nav link
       this.updateActiveLink(path);
       
@@ -81,6 +91,19 @@ const router = {
     `;
     document.title = '404 - Anush Sonone';
     window.scrollTo(0, 0);
+  },
+
+  /**
+   * Update canonical URL
+   */
+  updateCanonical(path) {
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = this.canonicals[path] || 'https://anush.wiki';
   },
 
   /**

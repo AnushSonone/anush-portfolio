@@ -116,7 +116,7 @@ The router (`js/router.js`):
 1. Install Vercel CLI: `npm i -g vercel`
 2. Run `vercel` in your project directory
 3. Follow the prompts
-4. Your site will be live at `https://your-project.vercel.app`
+4. Your site will be live at your custom domain (e.g., `https://anush.wiki`)
 
 **Or use the Vercel dashboard:**
 1. Go to [vercel.com](https://vercel.com)
