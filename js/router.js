@@ -8,6 +8,7 @@ const router = {
     '/': '/pages/home.html',
     '/projects': '/pages/projects.html',
     '/writing': '/pages/writing.html',
+    '/writing/college-application-journey': '/pages/articles/college-application-journey.html',
     '/contact': '/pages/contact.html'
   },
   
@@ -17,6 +18,7 @@ const router = {
     '/': 'Anush Sonone',
     '/projects': 'Projects - Anush Sonone',
     '/writing': 'Writing - Anush Sonone',
+    '/writing/college-application-journey': 'College Application Journey - Anush Sonone',
     '/contact': 'Contact - Anush Sonone'
   },
 
@@ -24,6 +26,7 @@ const router = {
     '/': 'https://anush.wiki',
     '/projects': 'https://anush.wiki/#/projects',
     '/writing': 'https://anush.wiki/#/writing',
+    '/writing/college-application-journey': 'https://anush.wiki/#/writing/college-application-journey',
     '/contact': 'https://anush.wiki/#/contact'
   },
 
