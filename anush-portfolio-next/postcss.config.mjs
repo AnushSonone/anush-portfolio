@@ -1,7 +1,6 @@
+/** PostCSS config — no Tailwind; global styles live in `src/app/globals.css`. */
 const config = {
-  plugins: {
-    "@tailwindcss/postcss": {},
-  },
+  plugins: {},
 };
 
 export default config;
